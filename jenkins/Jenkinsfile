@@ -16,13 +16,13 @@ pipeline {
             steps {
                 sh 'mvn test'
             }
-        }
+        
             post {
                 always {
                     junit 'target/surefire-reportd/*.xml'
                 }
             }
-            
+        }  
        
         stage('Deliever') {
             steps {
